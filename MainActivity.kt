@@ -16,6 +16,7 @@ import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.rasid.pasarraya.databinding.ActivityMainBinding
+import com.rasid.pasarraya.ui.login.LoginActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,6 +37,15 @@ class MainActivity : AppCompatActivity() {
         googleSignInClient = GoogleSignIn.getClient(this,gso)
 
         binding.googleSignIn.setOnClickListener { signIn() }
+
+        binding.signInButton.setOnClickListener{
+            val intent = Intent(this,LoginActivity::class.java)
+            startActivity(intent)
+        }
+        binding.registerButton.setOnClickListener{
+            val intent = Intent(this,RegisterActivity::class.java)
+            startActivity(intent)
+        }
 
 
     }
