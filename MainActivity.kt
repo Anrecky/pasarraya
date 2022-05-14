@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateUI(user: FirebaseUser?) {
 
-            Toast.makeText(this,"It works",Toast.LENGTH_LONG)
+            Toast.makeText(this,"It works",Toast.LENGTH_LONG).show()
 
     }
 
